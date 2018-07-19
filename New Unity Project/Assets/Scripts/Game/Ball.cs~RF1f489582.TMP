@@ -1,0 +1,32 @@
+﻿using System.Collections;
+using System.Collections.Generic;
+using UnityEngine;
+
+public class Ball : MonoBehaviour
+{
+
+    /// <summary>
+    /// ２次元ベクトルの内積を求めます。
+    /// </summary>
+    /// <param name="v1"> ベクトル１ </param>
+    /// <param name="v2"> ベクトル２ </param>
+    /// <returns>  </returns>
+    public static float CrossVector2(Vector2 v1, Vector2 v2)
+    {
+        return v1.x * v2.x + v1.y * v2.y;
+    }
+
+
+
+
+    public void MirrorCopyThisBall(Vector2 firstPoint, Vector2 secondPoint)
+    {
+        var l = firstPoint - secondPoint;
+
+        var n = new Vector2(l.y, -l.x).normalized;
+
+        Vector2 pos = 2*(firstPoint-transform.position)
+    }
+
+
+}
